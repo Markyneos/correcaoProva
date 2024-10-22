@@ -11,7 +11,7 @@ import time
 import sys
 
 
-lista = [randint(1, 1000) for _ in range(100000)]
+lista = [randint(1, 1000000) for _ in range(100000)]
 
 
 #Solução 1:
@@ -75,18 +75,14 @@ print(tem_duplicados3(lista))
 
 
 '''
-Resposta: letra b, c e d, de acordo com as saídas. Gabarito: Letra c e d.
+Resposta: letra c e d, de acordo com as saídas. 
 
 Explicação: A abordagem 1 consome menos espaço em comparação às outras, pois tem uma lista, enquanto o resto
-cria uma lista e um set e uma lista e sua cópia. Em tempo, a solução 3 é mais eficiente, porque realiza somente
-uma iteração, enquanto as outras realizam no mínimo duas, e é possível ver as provas disto pela função time em
-cada definição de função. A solução 2, como diz a alternativa b, é mais eficiente em tempo do que sua eficiência em espaço,
-porque ocupa mais espaço armazenando duas listas, mas ela faz somente uma iteração sobre elas.
+cria uma lista e um set e uma lista e sua cópia, entretanto, ela peca em tempo por percorrer a lista duas vezes.
+Em tempo, a solução 3 é mais eficiente, porque realiza somente uma iteração, enquanto as outras realizam no mínimo
+duas, e é possível ver as provas disto pela função time em cada definição de função. Porém, como é dito na alter-
+nativa, ela peca em espaço por armazenar a lista original e um set.
 
-Execução do código: Quando executo o código, as minhas saídas afirmam que a solução 2 ocupa mais tempo e espaço que as outras
-duas, enquanto a primeira consome um pouco mais de tempo que a segunda e menos espaço que as duas, e a terceira um pouco mais
-de espaço que a primeira e um pouco menos de tempo.
-
-Relatório: Marquei a letra d em minha prova, pois estava certo pra mim que a solução 3 levaria menos tempo, por realizar
-uma iteração somente, e mais espaço por usar um set e a lista original.
+Relatório: Marquei a letra d em minha prova, pois estava certo pra mim que a solução 1 levaria mais tempo, por
+realizar duas iterações, e utilizar menos espaço, por somente utilizar a lista original sem utilizar cópias.
 '''
